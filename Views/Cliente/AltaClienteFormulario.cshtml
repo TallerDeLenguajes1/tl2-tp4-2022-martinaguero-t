@@ -1,0 +1,9 @@
+@model MVCtest.Models.Cliente
+<h1 class="display-4">Página del formulario.</h1>
+<a>
+    <form asp-action="Index" method="post">
+        <label asp-for="Name"> Nombre: <input name="name"></label>
+        <label asp-for="Edad"> Edad: <input type="number" name="edad"></label>
+        <input type="submit">
+    </form>
+</a>
