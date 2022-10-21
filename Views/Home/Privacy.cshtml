@@ -1,6 +1,18 @@
-﻿@{
+﻿@model List<MVCtest.Models.Cliente>
+@{
     ViewData["Title"] = "Privacy Policy";
+    // Diccionario para resolver tareas generales.
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<p>
+    Use this page to detail your site's privacy policy.
+</p>
+
+
+@foreach (Cliente cliente in Model)
+{
+    <p> 
+        Información del cliente: @cliente.Name, edad @cliente.Edad
+    </p>
+}

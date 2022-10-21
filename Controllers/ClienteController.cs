@@ -24,7 +24,7 @@ namespace MVCtest.Controllers
         [HttpPost]
         public IActionResult AltaClienteFormulario(Cliente cliente)
         {
-            return RedirectToAction("Index");
+            return View();
         }
 
 

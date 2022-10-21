@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Creación de turno";
+    // Diccionario para resolver tareas generales.
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <form asp-controller="Turnos" asp-action="CrearTurnoPost" method="post">
+        <input name="nombreCliente">
+        <input type="submit">
+    </form>
+</p>

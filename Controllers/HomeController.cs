@@ -19,8 +19,12 @@ public class HomeController : Controller
     }
 
     public IActionResult Privacy()
-    {
-        return View();
+    {   
+        List<Cliente> clientes = new List<Cliente>();
+        clientes.Add(new Cliente("Juan",32));
+        clientes.Add(new Cliente("Maria",34));
+        clientes.Add(new Cliente("Pocho",23));
+        return View(clientes);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

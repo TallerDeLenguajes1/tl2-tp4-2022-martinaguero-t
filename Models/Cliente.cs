@@ -14,7 +14,8 @@ namespace MVCtest.Models
             this.Edad = edad;
         }
         public Cliente(){
-            
+            this.Name = "";
+            this.Edad = 0;
         }
 
         public string Name { get => name; set => name = value; }
