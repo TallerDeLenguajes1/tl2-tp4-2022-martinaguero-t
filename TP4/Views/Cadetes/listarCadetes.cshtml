@@ -1,0 +1,45 @@
+@model List<TP4.Models.Cadete>
+    
+<div class="text-center">
+    <h1 class="display-4">Listado de cadetes</h1>
+    <p>A continuacion se listan los cadetes:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Direccion
+                </th>
+                <th>
+                    Teléfono
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cadete in Model)
+            {
+                <tr>
+                    <td>
+                        @cadete.ID
+                    </td>
+                    <td>
+                        @cadete.Nombre
+                    </td>
+                    <td>
+                        @cadete.Direccion
+                    </td>
+                    <td>
+                        @cadete.Telefono
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
