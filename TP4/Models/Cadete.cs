@@ -2,6 +2,7 @@ namespace TP4.Models
 {
     public class Cadete {
 
+        private static int autonumerico = 0;
         private int id;
         public string nombre;
         private string direccion;
@@ -9,13 +10,14 @@ namespace TP4.Models
 
         private List<Pedido> pedidos;
 
-        public int ID { get => id; set => id = value; }
+        public int ID { get => id; }
         public string Direccion { get => direccion; set => direccion = value; }
         public string Telefono { get => telefono; set => telefono = value; }
         public string Nombre { get => nombre; set => nombre = value; }
 
-        public Cadete(int ID, string nombre, string direccion, string telefono){
-            this.id = ID;
+        public Cadete(string nombre, string direccion, string telefono){
+            autonumerico++;
+            this.id = autonumerico;
             this.nombre = nombre;
             this.direccion = direccion;
             this.telefono = telefono;

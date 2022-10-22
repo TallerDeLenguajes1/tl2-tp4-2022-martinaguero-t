@@ -30,13 +30,8 @@ public class CadetesController : Controller
     }
 
     [HttpGet]
-    public IActionResult eliminarCadete(){
-        return View();
-    }
-
-    [HttpPost]
-    public IActionResult eliminarCadetePost(int idCadete){
-        cadetes.Remove(cadetes.Find(cadete => cadete.ID == idCadete));
+    public IActionResult eliminarCadete(int ID){
+        cadetes.Remove(cadetes.Find(cadete => cadete.ID == ID));
         return RedirectToAction("listarCadetes");
     }
     

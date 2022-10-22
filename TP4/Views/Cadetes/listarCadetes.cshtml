@@ -1,45 +1,56 @@
 @model List<TP4.Models.Cadete>
-    
-<div class="text-center">
-    <h1 class="display-4">Listado de cadetes</h1>
-    <p>A continuacion se listan los cadetes:</p>
-    <table>
-        <thead>
-            <tr>
-                <th>
-                    ID
-                </th>
-                <th>
-                    Nombre
-                </th>
-                <th>
-                    Direccion
-                </th>
-                <th>
-                    Teléfono
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var cadete in Model)
-            {
-                <tr>
-                    <td>
-                        @cadete.ID
-                    </td>
-                    <td>
-                        @cadete.Nombre
-                    </td>
-                    <td>
-                        @cadete.Direccion
-                    </td>
-                    <td>
-                        @cadete.Telefono
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-</div>
+
+<section>
+    <h1 class="text-center">Listado de cadetes</h1>
+    <article class="text-center">
+        <p>A continuacion se listan los cadetes:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            Nombre
+                        </th>
+                        <th>
+                            Direccion
+                        </th>
+                        <th>
+                            Teléfono
+                        </th>
+                        <th>
+                            Borrado
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var cadete in Model)
+                    {
+                        <tr>
+                            <td>
+                                @cadete.ID
+                            </td>
+                            <td>
+                                @cadete.Nombre
+                            </td>
+                            <td>
+                                @cadete.Direccion
+                            </td>
+                            <td>
+                                @cadete.Telefono
+                            </td>
+                            <td>
+                                @Html.ActionLink("Eliminar","eliminarCadete","Cadetes", new {id = cadete.ID})
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+    </article>
+    <article>
+        <p id="agregarCadete">Si desea agregar la información de un cadete, <a asp-area="" asp-controller="Cadetes" asp-action="cargarCadete">haga click aquí.</a></p>
+    </article>
+</section>
 
 

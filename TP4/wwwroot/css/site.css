@@ -16,3 +16,35 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+table {
+  margin: 0 auto;
+  border: 0.05em solid black;
+  border-collapse : collapse;
+  width : 60%;
+}
+
+table th {
+  background-color: rgba(159, 242, 214, 0.824);
+}
+
+table th, table td {
+  padding: 0.5em;
+  border: 0.05em solid black;
+}
+
+p {
+  margin-top : 1em;
+}
+
+#agregarCadete {
+  background-color :rgba(159, 242, 214, 0.824);
+  padding: 0.4em;
+  margin: 1em auto;
+  text-align:center;
+  width:50%;
+}
+
+#agregarCadete a{
+  color:teal;
+}
