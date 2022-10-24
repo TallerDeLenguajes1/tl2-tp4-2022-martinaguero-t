@@ -4,10 +4,17 @@
     <h1 class="text-center">Cargar cadete</h1>
     <article>
         <form asp-controller="Cadetes" asp-action="cargarCadetePost" method="post">
-            
-
+            <label for="nombre"> Nombre: 
+                <input name="nombre" type="text">
+            </label>
+            <label for="direccion"> Direccion: 
+                <input name="direccion" type="text">
+            </label>
+            <label for="telefono"> Telefono:
+                <input name="telefono" type="text">
+            </label>
+            <input type="submit" value="Cargar">
         </form>
-
     </article>
 </section>
 

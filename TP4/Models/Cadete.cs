@@ -15,6 +15,10 @@ namespace TP4.Models
         public string Telefono { get => telefono; set => telefono = value; }
         public string Nombre { get => nombre; set => nombre = value; }
 
+        public Cadete(){
+            autonumerico++;
+            this.id = autonumerico;
+        }
         public Cadete(string nombre, string direccion, string telefono){
             autonumerico++;
             this.id = autonumerico;
